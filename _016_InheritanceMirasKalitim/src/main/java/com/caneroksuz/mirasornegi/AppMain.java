@@ -7,6 +7,7 @@ public class AppMain {
         Tasit tasit = new Tasit();
         tasit.yazdir();
 
+
         Araba araba = new Araba();
         araba.setTekerSayisi(4);
         System.out.println("Araba : " + araba.getTekerSayisi());
