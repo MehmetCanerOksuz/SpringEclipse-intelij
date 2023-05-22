@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b330aac-1725-49c2-8da3-0583393ae8c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/AltSinif1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/AltSinif2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/AltSinif3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/AppMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/IAraYuz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/SomutSinif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caneroksuz/SoyutSinif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+    <list default="true" id="4b330aac-1725-49c2-8da3-0583393ae8c4" name="Changes" comment="Interface projesi mimarisi">
+      <change afterPath="$PROJECT_DIR$/../_024_InterfaceArayuzVeteriner/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +47,18 @@
       <option name="presentableId" value="Default" />
       <updated>1684756807053</updated>
     </task>
+    <task id="LOCAL-00001" summary="Interface projesi mimarisi">
+      <created>1684758612159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684758612159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Interface projesi mimarisi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface projesi mimarisi" />
   </component>
 </project>
