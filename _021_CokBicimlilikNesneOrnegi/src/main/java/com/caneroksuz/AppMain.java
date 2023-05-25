@@ -37,5 +37,22 @@ public class AppMain {
 
         gelenCevap = veteriner.hayvanBilgisiAl(kus);
         System.out.println(gelenCevap);
+
+        //AppMain appMain = new AppMain();
+        System.out.println(caner(25,"Deniz"));
+
+
+
+
+
+    }
+
+
+   private static String caner(int sayi,String isim){
+
+        int sayi2 = 5;
+        int sonuc = sayi + sayi2;
+
+        return isim + "'in bulduğu sonuc ==>>>"  + sonuc;
     }
 }
