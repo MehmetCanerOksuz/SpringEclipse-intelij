@@ -6,6 +6,5 @@ public class AppMain {
         Book book = new Book();
         book.addAuthor("Caner Öksüz");
         System.out.println(book.getAuthors()[0]);
-
     }
 }
