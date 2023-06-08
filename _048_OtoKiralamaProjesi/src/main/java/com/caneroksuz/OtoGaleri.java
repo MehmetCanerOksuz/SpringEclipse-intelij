@@ -202,6 +202,7 @@ public class OtoGaleri implements IOtoGaleri{
 
         System.out.println("Oto Galeri Hoşe Geldiniz..");
 
+
         OtoGaleri otoGaleri = new OtoGaleri();
 
         otoGaleri.kasiyerOlustur();
