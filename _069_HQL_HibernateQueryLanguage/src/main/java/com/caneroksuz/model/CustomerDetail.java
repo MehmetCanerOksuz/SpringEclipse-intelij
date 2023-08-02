@@ -1,10 +1,10 @@
 package com.caneroksuz.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
 import java.util.Date;
-import org.hibernate.annotations.Parameter;
 
 
 @Entity
@@ -83,4 +83,14 @@ public class CustomerDetail {
     }
 
 
+    @Override
+    public String toString() {
+        return "CustomerDetail{" +
+                "customer=" + customer +
+                ", id=" + id +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
+    }
 }
