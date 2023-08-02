@@ -1,0 +1,33 @@
+/* tagı toptan grup secmesi yapar */
+div{
+    background-color: red; 
+}
+
+/* class secmesi sadece belirli bir grup */
+
+.caliskan{
+    background-color: chartreuse;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+p.caliskan{
+    background-color: chocolate;
+}
+
+#takimlideri{
+    background-color: darkgreen;
+}
+
+/* id degerine göre tekil secim yapar */
+#takim1{
+    background-color: aqua;
+}
+
+#takim2{
+    background-color: blueviolet;
+}
+

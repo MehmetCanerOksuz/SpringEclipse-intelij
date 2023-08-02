@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let calisan = {
+      //     adi: "Mehmet",
+      //     soyadi: "Caner",
+      //     tecrübe: 2,
+      //     maas: 25000,
+      //   };
+      //   console.log("Adi: " + calisan.adi);
+      //   console.log("soyadi: " + calisan.soyadi);
+      //   console.log("Tecrübe: " + calisan.tecrübe);
+      //   console.log("Maas: " + calisan.maas);
+
+      function calisan() {
+        (this.adi = ""),
+          (this.soyadi = ""),
+          (this.tecrübe = 0),
+          (this.maas = 0);
+      }
+
+      let calisanKisi = new calisan();
+      calisanKisi.adi = "Ünal";
+      calisanKisi.soyadi = "Gani";
+      calisanKisi.tecrübe = 3;
+      calisanKisi.maas = 30000;
+
+      console.log("Adi: " + calisanKisi.adi);
+      console.log("soyadi: " + calisanKisi.soyadi);
+      console.log("Tecrübe: " + calisanKisi.tecrübe);
+      console.log("Maas: " + calisanKisi.maas);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+div{
+    background-color: gold;
+    height: 380px;
+    width: 100px;
+}
+
+#takim2{
+    background-color: silver;
+    max-width: 250px;
+    max-height: 350px;
+    width: 300px;
+    height: 130px;
+}
