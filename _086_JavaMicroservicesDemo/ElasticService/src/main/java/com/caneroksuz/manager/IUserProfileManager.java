@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import static com.caneroksuz.constant.EndPoints.SAVE;
 
-/*@FeignClient(name = "user-profile-manager",
+@FeignClient(name = "user-profile-manager",
         url = "http://localhost:9093/user",
-        decode404 = true)*/
+        decode404 = true)
 public interface IUserProfileManager {
 
+    //    http://localhost:9093/user/save
     @PostMapping(SAVE)
     ResponseEntity<Boolean> save(@RequestBody UserProfileSaveRequestDto dto);
+
+    // @Mapping(target = "userProfileId",source = "id")
+    // UserProfile toUserProfile(final UserProfileSaveRequestDto dto);
 }

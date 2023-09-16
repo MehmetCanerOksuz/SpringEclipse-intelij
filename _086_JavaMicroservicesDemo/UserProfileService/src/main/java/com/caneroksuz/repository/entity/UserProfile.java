@@ -1,10 +1,11 @@
 package com.caneroksuz.repository.entity;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
-@Builder // bir sınıftan nesne türetmeyi sağlar.
+@SuperBuilder // bir sınıftan nesne türetmeyi sağlar.
 @Data //get set metodlarını otomatik tanımlar.
 @NoArgsConstructor //boş constructor oluşturur.
 @AllArgsConstructor //dolu constructor oluşturur.
@@ -26,6 +27,6 @@ public class UserProfile {
     private String phone;
     private String avatar;
 
-    private Long createAt;
-    private boolean state;
+//    private Long createAt;
+//    private boolean state;
 }

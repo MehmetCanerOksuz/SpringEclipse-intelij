@@ -1,5 +1,5 @@
 #JDK sürümü
-FROM openjdk:20
+FROM openjdk:17
 
 # projenin JAR dosyasinin image icindeki adresi
 ARG JAR_FILE=target/*.jar

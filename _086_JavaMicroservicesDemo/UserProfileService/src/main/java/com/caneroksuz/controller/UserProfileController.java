@@ -4,6 +4,7 @@ import com.caneroksuz.dto.request.UserProfileSaveRequestDto;
 import com.caneroksuz.repository.entity.UserProfile;
 import com.caneroksuz.service.UserProfileService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ public class UserProfileController {
 
 
     @PostMapping(SAVE)
-    public ResponseEntity<Boolean> save(@RequestBody UserProfileSaveRequestDto dto) {
+    public ResponseEntity<Boolean> save(@RequestBody UserProfileSaveRequestDto dto){
         return ResponseEntity.ok(userProfileService.saveDto(dto));
     }
 
@@ -33,5 +34,16 @@ public class UserProfileController {
     @GetMapping("/hi")
     public String hi(){
         return "Hi: UserProfile Service";
+    }
+
+    @GetMapping("/getname")
+    public ResponseEntity<String> getUpperCase(String firtName){
+        return ResponseEntity.ok(userProfileService.getUpperCase(firtName));
+    }
+
+    @GetMapping("/clearcache")
+    public ResponseEntity<Void> clearCache(){
+        userProfileService.clearCashe();
+        return ResponseEntity.ok().build();
     }
 }

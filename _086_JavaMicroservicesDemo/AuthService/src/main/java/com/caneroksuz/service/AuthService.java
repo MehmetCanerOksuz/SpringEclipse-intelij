@@ -2,11 +2,12 @@ package com.caneroksuz.service;
 
 import com.caneroksuz.dto.request.DoLoginRequestDto;
 import com.caneroksuz.dto.request.DoRegisterRequestDto;
-import com.caneroksuz.dto.request.UserProfileSaveRequestDto;
 import com.caneroksuz.exception.AuthServiceException;
 import com.caneroksuz.exception.ErrorType;
 import com.caneroksuz.manager.IUserProfileManager;
 import com.caneroksuz.mapper.IAuthMapper;
+import com.caneroksuz.rabbitmq.model.SaveAuthModel;
+import com.caneroksuz.rabbitmq.producer.CreateUserProducer;
 import com.caneroksuz.repository.IAuthRepository;
 import com.caneroksuz.repository.entity.Auth;
 import com.caneroksuz.utility.JwtTokenManager;
@@ -24,12 +25,16 @@ public class AuthService extends ServiceManager<Auth, Long> {
 
     private final IUserProfileManager userProfileManager;
 
+    private final CreateUserProducer createUserProducer;
 
-    public AuthService(IAuthRepository authRepository, JwtTokenManager jwtTokenManager, IUserProfileManager userProfileManager) {
+
+    public AuthService(IAuthRepository authRepository, JwtTokenManager jwtTokenManager,
+                       IUserProfileManager userProfileManager, CreateUserProducer createUserProducer) {
         super(authRepository);
         this.authRepository = authRepository;
         this.jwtTokenManager = jwtTokenManager;
         this.userProfileManager = userProfileManager;
+        this.createUserProducer = createUserProducer;
     }
 
 
@@ -47,8 +52,14 @@ public class AuthService extends ServiceManager<Auth, Long> {
                         .username(auth.getUsername())
                         .email(auth.getEmail())
                 .build());*/
-        userProfileManager.save(IAuthMapper.INSTANCE.fromAuth(auth)
-        );
+//        userProfileManager.save(IAuthMapper.INSTANCE.fromAuth(auth));
+
+        //Mesajı RabbitMQ'ya gönderdik..
+        createUserProducer.convertAndSend(SaveAuthModel.builder()
+                .authid(auth.getId())
+                .username(auth.getUsername())
+                .email(auth.getEmail())
+                .build());
 
         return auth;
     }

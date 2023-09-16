@@ -1,17 +1,18 @@
 package com.caneroksuz.repository.entity;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
-@Builder // bir sınıftan nesne türetmeyi sağlar.
+@SuperBuilder // bir sınıftan nesne türetmeyi sağlar.
 @Data //get set metodlarını otomatik tanımlar.
 @NoArgsConstructor //boş constructor oluşturur.
 @AllArgsConstructor //dolu constructor oluşturur.
 @ToString
 @Entity
 @Table(name = "tbl_auth")
-public class Auth {
+public class Auth extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +22,6 @@ public class Auth {
     private String email;
     private String password;
 
-    private Long createAt;
-    private boolean state;
+//    private Long createAt;
+//    private boolean state;
 }

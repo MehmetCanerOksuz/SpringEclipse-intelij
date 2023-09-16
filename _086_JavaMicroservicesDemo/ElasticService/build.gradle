@@ -1,0 +1,5 @@
+
+dependencies {
+    implementation libs.springBootDataElasticSearch
+    implementation libs.springBootSecurity
+}
